@@ -1,6 +1,7 @@
 header {
   height: 400px;
-  background-color: blanchedalmond;
+  background-color: goldenrod;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
