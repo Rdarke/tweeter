@@ -8,12 +8,14 @@ $(document).ready(function() {
     console.log(characters);
 
     const $counter = $(this).closest("form").find(".counter");
-    console.log($counter)
 
     const charactersMax = 140;
     $counter.val(charactersMax - characters);
 
-    console.log($counter);
+    if (characters > charactersMax) {
+      console.log("The counter is below zero!!");
+      $counter.css("color", "red");
+    }
   })
 });
 
