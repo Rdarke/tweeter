@@ -21,13 +21,20 @@
  
 }
 
+#tweet-submit-and-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 #tweet-text {
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
-  border-bottom-style: 4px solid #545149;
+  border-bottom-style: solid #545149;
   background-color: #f4f1ec;
   width: 100%;
   margin: auto;
   font-weight: 600;
 }
+
