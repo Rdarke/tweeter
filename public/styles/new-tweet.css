@@ -1,12 +1,19 @@
 
-button {
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+.tweet-button {
   background-color: #4056A1;
   font-family: 'Bungee', cursive;
   color: white;
   font-size: large;
 }
 
-output.counter {
+.counter {
   font-family: 'Bungee', cursive;
   color: #545149;
   font-size: xx-large;
@@ -14,7 +21,7 @@ output.counter {
  
 }
 
-input[type=text], select, textarea {
+#tweet-text {
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
@@ -22,4 +29,5 @@ input[type=text], select, textarea {
   background-color: #f4f1ec;
   width: 100%;
   margin: auto;
+  font-weight: 600;
 }
