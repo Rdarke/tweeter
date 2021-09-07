@@ -1,10 +1,25 @@
-.new-tweet {
-
-}
 
 button {
   background-color: #4056A1;
   font-family: 'Bungee', cursive;
   color: white;
   font-size: large;
+}
+
+output.counter {
+  font-family: 'Bungee', cursive;
+  color: #545149;
+  font-size: xx-large;
+  align-self: flex-end;
+ 
+}
+
+input[type=text], select, textarea {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: 4px solid #545149;
+  background-color: #f4f1ec;
+  width: 100%;
+  margin: auto;
 }
