@@ -1,4 +1,6 @@
-
+/*
+ * Nav styling.
+ */
 nav {
   z-index: 10;
   background-color: #4056A1;
@@ -9,6 +11,9 @@ nav {
   justify-content: space-between;
 }
 
+/*
+ * Tweeter title styling
+ */
 .nav-title {
   font-family: 'Bungee', cursive; 
   font-size: xx-large; 
@@ -16,8 +21,15 @@ nav {
   align-items: flex-end;
 }
 
+/*
+ * New tweet styling with icon.
+ */
 .nav-new-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.fa-angle-double-down {
+  color: red;
 }
