@@ -16,6 +16,7 @@ article.tweet:hover {
 article.tweet > header {
   height: 80px;
   padding: 1em;
+  margin-top: 0.5em;
   background-color: #f4f1ec;
   background-image: none;
   display: flex;
