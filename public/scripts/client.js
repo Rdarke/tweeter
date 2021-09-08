@@ -44,19 +44,20 @@ $(document).ready(function() {
     </footer>
     </article>`
 
+    console.log($tweet);
     return $tweet;
   };
 
-
+  createTweetElement(tweetData);
+  $('#tweets-container').append($tweet);
 
 });
 
 // Test / driver code (temporary)....................
-// to see what it looks like
-console.log($tweet); 
+ 
 
 // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-$('#tweets-container').append($tweet); 
+ 
 
 // lecture example 
   // create single blog post node
