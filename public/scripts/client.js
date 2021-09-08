@@ -5,17 +5,33 @@
  */
 
 // Hard coded tweet object - short term. 
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
+const tweetData = [
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
       "handle": "@SirIsaac"
     },
-  "content": {
+    "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-  "created_at": 1461116232227
-};
+    "created_at": 1461116232227
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd" },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1461113959088
+  }
+];
+
+
+
 
 
 $(document).ready(function() {
@@ -48,27 +64,13 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  createTweetElement(tweetData);
-  $('#tweets-container').append(createTweetElement(tweetData));
+  // Function is responsible for taking an array of tweet objects and then appending each one.
+  const renderTweets = function(tweets) {
+    for (let tweet in tweets) {
+      const $tweet = createTweetElement(tweets[tweet]);
+      $('#tweets-container').append($tweet);
+    }
+  }
+  renderTweets(tweetData);
 
 });
-
-// Test / driver code (temporary)....................
- 
-
-// to add it to the page so we can make sure it's got all the right elements, classes, etc.
- 
-
-// lecture example 
-  // create single blog post node
-  // const createBlog = (blog) => {
-  //   const $title = $('<h2>').text(blog.title);
-  //   const $body = $('<p>').text(blog.body);
-  //   const $authorId = $('<p>').text(blog.userId);
-
-  //   const $blog = $('<div>').addClass('blog-post');
-
-  //   $blog.append($title, $body, $authorId)
-
-  //   return $blog
-  // }
