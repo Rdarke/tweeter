@@ -20,22 +20,22 @@ const tweetData = {
 
 $(document).ready(function() {
 
-  //Takes in a tweet object and returns a tweet <article> element. This element includes HTML tweet structure.
+  //Takes in a object and returns a tweet <article> element. This element includes HTML tweet structure.
   const createTweetElement = function(obj) {
     const $tweet = `
     <article class ="tweet">
     <header>
       <div class="user-icon">
-        <img class="avatar" src="https://i.imgur.com/73hZDYK.png" alt="Newton">
-        <span class ="name" >Newton</span>
+        <img class="avatar" src="${obj.user.avatars}" alt="">
+        <span class ="name"> ${obj.user.name} </span>
       </div>
         <div class="user-name">
-          <span >@Newton </span> 
+          <span> ${obj.user.handle} </span> 
         </div>
     </header>
-      <div class="content" ><p>Some quote about standing on giants!</p></div>
+      <div class="content" ><p> ${obj.content.text} </p></div>
     <footer>
-      <div class="timeline"> 10 Days ago</div>
+      <div class="timeline"> ${obj.created_at} </div>
         <div class="tweet-icons">
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
