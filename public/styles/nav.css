@@ -7,7 +7,8 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #4056A1;
+  background-color: goldenrod;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   color: white;
   height: 120px;
   padding: 1.5em;
