@@ -35,7 +35,7 @@ $(document).ready(function() {
     </header>
       <div class="content" ><p> ${obj.content.text} </p></div>
     <footer>
-      <div class="timeline"> ${obj.created_at} </div>
+      <div class="timeline">${timeago.format(new Date(obj.created_at))}</div>
         <div class="tweet-icons">
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
