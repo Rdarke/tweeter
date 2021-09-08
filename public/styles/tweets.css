@@ -13,7 +13,7 @@ article.tweet:hover {
   box-shadow: 11px 10px 2px 1px rgba(0, 0, 255, .2);
 }
 
-article.tweet header {
+article.tweet > header {
   height: 80px;
   padding: 1em;
   background-color: #f4f1ec;
@@ -23,13 +23,27 @@ article.tweet header {
   justify-content: space-between;
 }
 
-.solid-line {
-  border-top: 8px solid #545149;
+.user-icon {
+  display: flex;
+  align-items: center;
 }
 
-article.tweet footer {
-  background-color: #f4f1ec;
+.user-name {
+  color: rgba(0, 0, 255, .4);
+}
+
+div.content {
+  height: 80px;
   padding: 1em;
+  font-weight: 600;
+}
+
+article.tweet > footer {
+  background-color: #f4f1ec;
+  font-weight: 400;
+  font-size: large;
+  padding: 1em;
+  border-top: solid #545149;
   display: flex;
   justify-content: space-between;
 }
