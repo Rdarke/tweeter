@@ -49,7 +49,7 @@ $(document).ready(function() {
   };
 
   createTweetElement(tweetData);
-  $('#tweets-container').append($tweet);
+  $('#tweets-container').append(createTweetElement(tweetData));
 
 });
 
