@@ -48,7 +48,6 @@ $(document).ready(function() {
     </footer>
     </article>`
 
-    console.log($tweet);
     return $tweet;
   };
 
@@ -56,7 +55,7 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     for (let tweet in tweets) {
       const $tweet = createTweetElement(tweets[tweet]);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     }
   }
   
@@ -65,9 +64,10 @@ $(document).ready(function() {
   $form.on('submit', function(event) {
     event.preventDefault();
     console.log('the form has been submitted')
+    console.log('This =', $(this));
 
     const serializedData = $(this).serialize() 
-    console.log(serializedData);
+    console.log(serializedData.length);
 
     $.post('/tweets', serializedData, (response) => {
       console.log(response)
