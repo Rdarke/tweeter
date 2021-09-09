@@ -59,19 +59,23 @@ $(document).ready(function() {
     }
   }
   
-  // AJAX for sending (POST) the tweet text to the server.
+  
   const $form = $('#new-tweet-form');
+
+  // AJAX for sending (POST) the tweet text to the server.
   $form.on('submit', function(event) {
     event.preventDefault();
-    console.log('the form has been submitted')
-    console.log('This =', $(this));
-
-    const serializedData = $(this).serialize() 
-    console.log(serializedData.length);
-
-    $.post('/tweets', serializedData, (response) => {
-      console.log(response)
-    })
+    const serializedData = $(this).serialize()
+    
+      if (serializedData.length < 6 || serializedData.length >= 146) {
+        alert("Hellow i'm an alert");
+        console.log(serializedData.length);
+      } else {
+        $.post('/tweets', serializedData, (response) => {
+          console.log(response)
+        })
+        location.reload(); 
+      }
   });
 
   fetchTweets();
