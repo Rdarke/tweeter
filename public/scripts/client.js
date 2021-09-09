@@ -7,6 +7,14 @@
 
 $(document).ready(function() {
 
+    // Function is responsible for taking an array of tweet objects and then appending each one.
+    const renderTweets = function(tweets) {
+      for (let tweet in tweets) {
+        const $tweet = createTweetElement(tweets[tweet]);
+        $('#tweets-container').prepend($tweet);
+      }
+    };
+
   // AJAX to fetch (GET) data from the server.
   const fetchTweets = () => {
 
@@ -49,16 +57,7 @@ $(document).ready(function() {
     </article>`
 
     return $tweet;
-  };
-
-  // Function is responsible for taking an array of tweet objects and then appending each one.
-  const renderTweets = function(tweets) {
-    for (let tweet in tweets) {
-      const $tweet = createTweetElement(tweets[tweet]);
-      $('#tweets-container').prepend($tweet);
-    }
-  }
-  
+  };  
   
   const $form = $('#new-tweet-form');
 
@@ -74,7 +73,9 @@ $(document).ready(function() {
         $.post('/tweets', serializedData, (response) => {
           console.log(response)
         })
-        location.reload(); 
+        $("#tweet-text").val('');
+        $(".counter").val('140');
+        fetchTweets();
       }
   });
 
