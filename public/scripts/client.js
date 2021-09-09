@@ -31,9 +31,6 @@ const tweetData = [
 ];
 
 
-
-
-
 $(document).ready(function() {
 
   //Takes in a object and returns a tweet <article> element. This element includes HTML tweet structure.
@@ -72,5 +69,18 @@ $(document).ready(function() {
     }
   }
   renderTweets(tweetData);
+
+  const $form = $('#new-tweet-form');
+  $form.on('submit', function(event) {
+    event.preventDefault();
+    console.log('the form has been submitted')
+
+    const serializedData = $(this).serialize() 
+    console.log(serializedData);
+
+    $.post('/tweets', serializedData, (response) => {
+      console.log(response)
+    })
+  });
 
 });
