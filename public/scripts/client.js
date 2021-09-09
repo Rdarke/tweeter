@@ -66,17 +66,21 @@ $(document).ready(function() {
     event.preventDefault();
     const serializedData = $(this).serialize()
     
-      if (serializedData.length < 6 || serializedData.length >= 146) {
-        alert("Hellow i'm an alert");
-        console.log(serializedData.length);
-      } else {
-        $.post('/tweets', serializedData, (response) => {
-          console.log(response)
-        })
-        $("#tweet-text").val('');
-        $(".counter").val('140');
-        fetchTweets();
-      }
+    if ($("#tweet-text").val() === "") {
+      return alert("Hellow i'm an alert")
+    }
+    
+    if ($(".counter").val() < 0) {
+      return alert("Hellow i'm an alert")
+    }
+  
+    $.post('/tweets', serializedData, (response) => {
+    console.log(response)
+    $("#tweet-text").val('');
+    $(".counter").val('140');
+    fetchTweets(); // duplicates the tweets. 
+    })
+    
   });
 
   fetchTweets();
