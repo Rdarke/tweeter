@@ -1,0 +1,12 @@
+.error-popups {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+  font-weight: 600;
+  color: darkred;
+  border: darkred;
+  border-bottom: darkred;
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+  display: none;
+}
