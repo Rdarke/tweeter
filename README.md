@@ -21,13 +21,13 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!"Screenshot of Tweeter mobile home page!" (https://github.com/Rdarke/tweeter/blob/master/docs/tweeter-mobile-home.png?raw=true)
+!["Screenshot of Tweeter mobile home page"](https://github.com/Rdarke/tweeter/blob/master/docs/tweeter-mobile-home.png?raw=true)
 
-!["Screenshot of Tweeter header!"] (https://github.com/Rdarke/tweeter/blob/master/docs/tweeter-headers.png?raw=true)
+!["Screenshot of Tweeter header"](https://github.com/Rdarke/tweeter/blob/master/docs/tweeter-headers.png?raw=true)
 
-!["Screenshot of Tweeter tweet composer!"] (https://github.com/Rdarke/tweeter/blob/master/docs/tweeter-creation.png?raw=true)
+!["Screenshot of Tweeter tweet composer"](https://github.com/Rdarke/tweeter/blob/master/docs/tweeter-creation.png?raw=true)
 
-!["Screenshot of Tweeter desktop!"] (https://github.com/Rdarke/tweeter/blob/master/docs/tweeter-compose.png?raw=true)
+!["Screenshot of Tweeter desktop"](https://github.com/Rdarke/tweeter/blob/master/docs/tweeter-compose.png?raw=true)
 
-!["Screenshot of Tweeter desktop tweets!"] (https://github.com/Rdarke/tweeter/blob/master/docs/tweeter-compose.png?raw=true)
+!["Screenshot of Tweeter desktop tweets"](https://github.com/Rdarke/tweeter/blob/master/docs/tweeter-compose.png?raw=true)
 
