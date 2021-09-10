@@ -4,16 +4,15 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 $(document).ready(function() {
 
     // Function is responsible for taking an array of tweet objects and then appending each one.
-    const renderTweets = function(tweets) {
-      for (let tweet in tweets) {
-        const $tweet = createTweetElement(tweets[tweet]);
-        $('#tweets-container').prepend($tweet);
-      }
-    };
+  const renderTweets = function(tweets) {
+    for (let tweet in tweets) {
+      const $tweet = createTweetElement(tweets[tweet]);
+      $('#tweets-container').prepend($tweet);
+    }
+  };
 
   // AJAX to fetch (GET) data from the server.
   const fetchTweets = () => {
@@ -23,11 +22,11 @@ $(document).ready(function() {
       method: 'GET',
       dataType: 'json',
       success: (tweets) => {
-        console.log("Tweets", tweets)
+        console.log("Tweets", tweets);
         renderTweets(tweets);
       },
       error: (err) => {
-        console.log(`Error: ${err}`)
+        console.log(`Error: ${err}`);
       }
     })
   };
@@ -54,34 +53,47 @@ $(document).ready(function() {
           <i class="fas fa-heart"></i>
     </div>
     </footer>
-    </article>`
+    </article>`;
 
     return $tweet;
   };  
+
   
   const $form = $('#new-tweet-form');
 
   // AJAX for sending (POST) the tweet text to the server.
   $form.on('submit', function(event) {
     event.preventDefault();
-    const serializedData = $(this).serialize()
+    const serializedData = $(this).serialize();
+
+    // Function hides error-message popups after a set time.
+    const $hideMessage = $(function() {
+      setTimeout(function() {
+        $(".error-popup").hide()
+          }, 8000);
+      });
     
     if ($("#tweet-text").val() === "") {
+      $hideMessage;
       return $(".error-popup").text("** Cannot Tweet an empty Tweet! **").slideDown().show();
+      
     }
     
     if ($(".counter").val() < 0) {
+      $hideMessage;
       return $(".error-popup").text("** 140 character limit exceeded! **").slideDown().show();
     }
+    
   
     $.post('/tweets', serializedData, (response) => {
-    console.log(response)
     $("#tweet-text").val('');
     $(".counter").val('140');
     location.reload();
     })
 
   });
+
+
 
   // Retrives all tweets from DB on load.
   fetchTweets();
