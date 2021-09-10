@@ -22,7 +22,6 @@ $(document).ready(function() {
       method: 'GET',
       dataType: 'json',
       success: (tweets) => {
-        console.log("Tweets", tweets);
         renderTweets(tweets);
       },
       error: (err) => {
@@ -75,8 +74,7 @@ $(document).ready(function() {
     
     if ($("#tweet-text").val() === "") {
       $hideMessage;
-      return $(".error-popup").text("** Cannot Tweet an empty Tweet! **").slideDown().show();
-      
+      return $(".error-popup").text("** Cannot Tweet an empty Tweet! **").slideDown().show(); 
     }
     
     if ($(".counter").val() < 0) {
@@ -84,7 +82,6 @@ $(document).ready(function() {
       return $(".error-popup").text("** 140 character limit exceeded! **").slideDown().show();
     }
     
-  
     $.post('/tweets', serializedData, (response) => {
     $("#tweet-text").val('');
     $(".counter").val('140');

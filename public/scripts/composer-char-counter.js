@@ -4,7 +4,7 @@
 
 $(document).ready(function() {
   
-  const $tweetText = $("#tweet-text")
+  const $tweetText = $("#tweet-text");
   
   $tweetText.on("keyup", function() {
     const characters = this.textLength;
