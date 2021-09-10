@@ -67,22 +67,23 @@ $(document).ready(function() {
     const serializedData = $(this).serialize()
     
     if ($("#tweet-text").val() === "") {
-      return alert("Hellow i'm an alert")
+      return $(".error-popup").text("** Cannot Tweet an empty Tweet! **").slideDown().show();
     }
     
     if ($(".counter").val() < 0) {
-      return alert("Hellow i'm an alert")
+      return $(".error-popup").text("** 140 character limit exceeded! **").slideDown().show();
     }
   
     $.post('/tweets', serializedData, (response) => {
     console.log(response)
     $("#tweet-text").val('');
     $(".counter").val('140');
-    fetchTweets(); // duplicates the tweets. 
+    location.reload();
     })
-    
+
   });
 
+  // Retrives all tweets from DB on load.
   fetchTweets();
 
 });
