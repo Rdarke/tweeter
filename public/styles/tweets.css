@@ -37,6 +37,9 @@ div.content {
   height: 80px;
   padding: 1em;
   font-weight: 600;
+  margin-bottom: 0.5em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
 
 article.tweet > footer {

@@ -1,0 +1,68 @@
+  /* Laptops / Desktops: minimum width of 1030px */
+  @media only screen and (min-width: 1030px) {
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    
+    body {
+      color: #545149;
+      background-color: #f4f1ec;
+      font-size: 24px;
+      font-family: 'Source Sans Pro', sans-serif;
+      display: flex;
+      flex-direction: row;
+    }
+
+    nav {
+      z-index: 10;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      margin-bottom: 2em;
+      background-color: goldenrod;
+      background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+      color: white;
+      height: 120px;
+      padding: 1.5em;
+      display: flex;
+      justify-content: space-between;
+    }
+     
+    .container {
+      background-color: #f4f1ec;
+      width: 70%;
+      margin-top: 7em;
+      margin-bottom: auto;
+      margin-right: 1.5em;
+    }
+    
+    
+    header {
+      margin-top: auto;
+      height: 60%;
+      width: 30%;
+      margin-left: 2em;
+      margin-right: 2em;
+      margin-bottom: auto;
+      position: relative;
+    }
+
+    article.tweet > header {
+      height: 80px;
+      width: 90%;
+      padding: 1em;
+      margin-left: 1em;
+      margin-top: 0.5em;
+      margin-right: 1em;
+      background-color: #f4f1ec;
+      background-image: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+     
+}
