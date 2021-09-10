@@ -1,3 +1,7 @@
+/* 
+* Main style sheet for tweets section/article.
+*/
+
 article.tweet {
   height: 275px;
   border: 5px solid #545149;

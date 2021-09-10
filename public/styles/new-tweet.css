@@ -1,4 +1,6 @@
-
+/* 
+* Tweet from styling for both desktop & mobile. 
+*/
 .new-tweet {
   display: flex;
   flex-direction: column;
